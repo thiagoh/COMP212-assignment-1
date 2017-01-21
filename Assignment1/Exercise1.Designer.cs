@@ -27,10 +27,10 @@
             this.gradesListBox = new System.Windows.Forms.ListBox();
             this.gradeInput = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.clearButton = new System.Windows.Forms.Button();
+            this.removeButton = new System.Windows.Forms.Button();
+            this.sumButton = new System.Windows.Forms.Button();
+            this.averageButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -55,6 +55,7 @@
             // gradeInput
             // 
             this.gradeInput.Location = new System.Drawing.Point(191, 48);
+            this.gradeInput.MaxLength = 4;
             this.gradeInput.Name = "gradeInput";
             this.gradeInput.Size = new System.Drawing.Size(164, 20);
             this.gradeInput.TabIndex = 3;
@@ -69,57 +70,62 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.addGradeClick);
             // 
-            // button2
+            // clearButton
             // 
-            this.button2.Location = new System.Drawing.Point(191, 143);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(164, 38);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "clear";
-            this.button2.UseVisualStyleBackColor = true;
+            this.clearButton.Location = new System.Drawing.Point(191, 143);
+            this.clearButton.Name = "clearButton";
+            this.clearButton.Size = new System.Drawing.Size(164, 38);
+            this.clearButton.TabIndex = 5;
+            this.clearButton.Text = "clear";
+            this.clearButton.UseVisualStyleBackColor = true;
+            this.clearButton.Click += new System.EventHandler(this.clear_Click);
             // 
-            // button3
+            // removeButton
             // 
-            this.button3.Location = new System.Drawing.Point(191, 196);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(164, 38);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "remove";
-            this.button3.UseVisualStyleBackColor = true;
+            this.removeButton.Location = new System.Drawing.Point(191, 196);
+            this.removeButton.Name = "removeButton";
+            this.removeButton.Size = new System.Drawing.Size(164, 38);
+            this.removeButton.TabIndex = 6;
+            this.removeButton.Text = "remove";
+            this.removeButton.UseVisualStyleBackColor = true;
+            this.removeButton.Click += new System.EventHandler(this.removeButton_Click);
             // 
-            // button4
+            // sumButton
             // 
-            this.button4.Location = new System.Drawing.Point(191, 254);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(164, 38);
-            this.button4.TabIndex = 7;
-            this.button4.Text = "sum";
-            this.button4.UseVisualStyleBackColor = true;
+            this.sumButton.Location = new System.Drawing.Point(191, 254);
+            this.sumButton.Name = "sumButton";
+            this.sumButton.Size = new System.Drawing.Size(164, 38);
+            this.sumButton.TabIndex = 7;
+            this.sumButton.Text = "sum";
+            this.sumButton.UseVisualStyleBackColor = true;
+            this.sumButton.Click += new System.EventHandler(this.sumButton_Click);
             // 
-            // button5
+            // averageButton
             // 
-            this.button5.Location = new System.Drawing.Point(191, 313);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(164, 38);
-            this.button5.TabIndex = 8;
-            this.button5.Text = "average";
-            this.button5.UseVisualStyleBackColor = true;
+            this.averageButton.Location = new System.Drawing.Point(191, 313);
+            this.averageButton.Name = "averageButton";
+            this.averageButton.Size = new System.Drawing.Size(164, 38);
+            this.averageButton.TabIndex = 8;
+            this.averageButton.Text = "average";
+            this.averageButton.UseVisualStyleBackColor = true;
+            this.averageButton.Click += new System.EventHandler(this.averageButton_Click);
             // 
             // Exercise1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(367, 517);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.averageButton);
+            this.Controls.Add(this.sumButton);
+            this.Controls.Add(this.removeButton);
+            this.Controls.Add(this.clearButton);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.gradeInput);
             this.Controls.Add(this.gradesListBox);
             this.Controls.Add(this.label1);
             this.Name = "Exercise1";
             this.Text = "Form2";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Exercise1_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -131,9 +137,9 @@
         private System.Windows.Forms.ListBox gradesListBox;
         private System.Windows.Forms.TextBox gradeInput;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button clearButton;
+        private System.Windows.Forms.Button removeButton;
+        private System.Windows.Forms.Button sumButton;
+        private System.Windows.Forms.Button averageButton;
     }
 }

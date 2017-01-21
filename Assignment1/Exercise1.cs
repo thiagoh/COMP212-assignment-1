@@ -7,18 +7,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Globalization;
 
 namespace Assignment1 {
     public partial class Exercise1 : Form {
 
-        private List<Grade> grades = new List<Grade>();
+        private BindingList<Grade> grades = new BindingList<Grade>();
+        private NumberFormatInfo numberFormat;
 
         public Exercise1() {
             InitializeComponent();
 
-            //grades.Add(new Grade { Text = "nhaaaaa0", Value = 123 });
-            //grades.Add(new Grade { Text = "nhaaaaa1", Value = 123 });
-            //grades.Add(new Grade { Text = "nhaaaaa2", Value = 123 });
+            numberFormat = new NumberFormatInfo();
+            numberFormat.NumberDecimalSeparator = ".";
+            numberFormat.NumberGroupSeparator = ",";
+            numberFormat.NumberGroupSizes = new int[] { 3 };
+
+            grades.Add(new Grade(9.8, numberFormat));
+            grades.Add(new Grade(4.8, numberFormat));
+            grades.Add(new Grade(1.4, numberFormat));
 
             gradesListBox.DataSource = grades;
             gradesListBox.DisplayMember = "Text";
@@ -29,9 +36,8 @@ namespace Assignment1 {
 
         private void addGradeClick(object sender, EventArgs e) {
 
-            DialogResult result = MessageBox.Show(this, "nha 1", "my caption", MessageBoxButtons.YesNo);
-
-            Console.WriteLine(result);
+            //DialogResult result = MessageBox.Show(this, "nha 1", "my caption", MessageBoxButtons.YesNo);
+            //Console.WriteLine(result);
 
             string text = gradeInput.Text.Trim();
 
@@ -41,12 +47,10 @@ namespace Assignment1 {
 
                     var grade = new Grade {
                         Text = text,
-                        Value = Convert.ToDouble(text)
+                        Value = Convert.ToDouble(text, numberFormat)
                     };
-                    if (grade.Value >= 0) {
+                    if (grade.Value >= 0 && grade.Value <= 10.0) {
                         grades.Add(grade);
-                        gradesListBox.Refresh();
-                        gradesListBox.Update();
                     }
 
                 } catch (Exception ex) {
@@ -57,6 +61,39 @@ namespace Assignment1 {
             gradeInput.Text = "";
         }
 
+        private void clear_Click(object sender, EventArgs e) {
+            grades.Clear();
+        }
+
+        private void Exercise1_FormClosing(object sender, FormClosingEventArgs e) {
+            e.Cancel = true;
+        }
+
+        private void removeButton_Click(object sender, EventArgs e) {
+
+            if (gradesListBox.SelectedIndex >= 0) {
+                grades.RemoveAt(gradesListBox.SelectedIndex);
+            }
+        }
+
+        private void sumButton_Click(object sender, EventArgs e) {
+
+            double sum = 0;
+            for (int i = 0; i < grades.Count; i++) {
+                sum += grades[i].Value;
+            }
+
+            DialogResult result = MessageBox.Show(this, "Sum is " + sum, "Sum of grades", MessageBoxButtons.OK);
+        }
+
+        private void averageButton_Click(object sender, EventArgs e) {
+            double avg = 0;
+            for (int i = 0; i < grades.Count; i++) {
+                avg += grades[i].Value;
+            }
+            avg = avg / grades.Count;
+            DialogResult result = MessageBox.Show(this, "Avg is " + avg, "Avg of grades", MessageBoxButtons.OK);
+        }
     }
 
     public class Grade {
@@ -64,6 +101,11 @@ namespace Assignment1 {
         public string Text { get; set; }
         public double Value { get; set; }
 
+        public Grade() { }
 
+        public Grade(double v, NumberFormatInfo numberFormat) {
+            Text = Convert.ToString(v, numberFormat);
+            Value = v;
+        }
     }
 }
