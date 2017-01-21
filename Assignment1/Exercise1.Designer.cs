@@ -24,8 +24,8 @@
         /// </summary>
         private void InitializeComponent() {
             this.label1 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.gradesListBox = new System.Windows.Forms.ListBox();
+            this.gradeInput = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -44,20 +44,20 @@
             this.label1.Text = "Grades";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // listBox1
+            // gradesListBox
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(12, 48);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(153, 433);
-            this.listBox1.TabIndex = 2;
+            this.gradesListBox.FormattingEnabled = true;
+            this.gradesListBox.Location = new System.Drawing.Point(12, 48);
+            this.gradesListBox.Name = "gradesListBox";
+            this.gradesListBox.Size = new System.Drawing.Size(153, 433);
+            this.gradesListBox.TabIndex = 2;
             // 
-            // textBox1
+            // gradeInput
             // 
-            this.textBox1.Location = new System.Drawing.Point(191, 48);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(164, 20);
-            this.textBox1.TabIndex = 3;
+            this.gradeInput.Location = new System.Drawing.Point(191, 48);
+            this.gradeInput.Name = "gradeInput";
+            this.gradeInput.Size = new System.Drawing.Size(164, 20);
+            this.gradeInput.TabIndex = 3;
             // 
             // button1
             // 
@@ -65,9 +65,9 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(164, 38);
             this.button1.TabIndex = 4;
-            this.button1.Text = "button1";
+            this.button1.Text = "input";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.addGradeClick);
             // 
             // button2
             // 
@@ -75,7 +75,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(164, 38);
             this.button2.TabIndex = 5;
-            this.button2.Text = "button2";
+            this.button2.Text = "clear";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // button3
@@ -84,7 +84,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(164, 38);
             this.button3.TabIndex = 6;
-            this.button3.Text = "button3";
+            this.button3.Text = "remove";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // button4
@@ -93,7 +93,7 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(164, 38);
             this.button4.TabIndex = 7;
-            this.button4.Text = "button4";
+            this.button4.Text = "sum";
             this.button4.UseVisualStyleBackColor = true;
             // 
             // button5
@@ -102,7 +102,7 @@
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(164, 38);
             this.button5.TabIndex = 8;
-            this.button5.Text = "button5";
+            this.button5.Text = "average";
             this.button5.UseVisualStyleBackColor = true;
             // 
             // Exercise1
@@ -115,8 +115,8 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.gradeInput);
+            this.Controls.Add(this.gradesListBox);
             this.Controls.Add(this.label1);
             this.Name = "Exercise1";
             this.Text = "Form2";
@@ -128,8 +128,8 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ListBox gradesListBox;
+        private System.Windows.Forms.TextBox gradeInput;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
