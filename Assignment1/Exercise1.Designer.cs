@@ -49,7 +49,7 @@
             this.gradesListBox.FormattingEnabled = true;
             this.gradesListBox.Location = new System.Drawing.Point(12, 48);
             this.gradesListBox.Name = "gradesListBox";
-            this.gradesListBox.Size = new System.Drawing.Size(153, 433);
+            this.gradesListBox.Size = new System.Drawing.Size(153, 394);
             this.gradesListBox.TabIndex = 2;
             // 
             // gradeInput
@@ -114,7 +114,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(367, 517);
+            this.ClientSize = new System.Drawing.Size(367, 451);
             this.Controls.Add(this.averageButton);
             this.Controls.Add(this.sumButton);
             this.Controls.Add(this.removeButton);
@@ -123,6 +123,7 @@
             this.Controls.Add(this.gradeInput);
             this.Controls.Add(this.gradesListBox);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "Exercise1";
             this.Text = "Form2";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Exercise1_FormClosing);
