@@ -36,9 +36,6 @@ namespace Assignment1 {
 
         private void addGradeClick(object sender, EventArgs e) {
 
-            //DialogResult result = MessageBox.Show(this, "nha 1", "my caption", MessageBoxButtons.YesNo);
-            //Console.WriteLine(result);
-
             string text = gradeInput.Text.Trim();
 
             if (text.Length > 0) {
@@ -54,6 +51,7 @@ namespace Assignment1 {
                     }
 
                 } catch (Exception ex) {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     Console.WriteLine(ex.Message);
                 }
             }
