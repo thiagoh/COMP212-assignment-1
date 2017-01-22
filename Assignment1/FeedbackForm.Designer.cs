@@ -27,10 +27,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.nameTB = new System.Windows.Forms.TextBox();
+            this.commentsTB = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.emailTB = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -48,13 +48,13 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
+            this.searchEngineRB = new System.Windows.Forms.RadioButton();
+            this.linksRB = new System.Windows.Forms.RadioButton();
+            this.otherRB = new System.Windows.Forms.RadioButton();
+            this.referenceInBookRB = new System.Windows.Forms.RadioButton();
+            this.deitelRB = new System.Windows.Forms.RadioButton();
             this.label18 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.rateOurSiteCB = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -99,20 +99,20 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Comments: ";
             // 
-            // textBox1
+            // nameTB
             // 
-            this.textBox1.Location = new System.Drawing.Point(82, 92);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(421, 20);
-            this.textBox1.TabIndex = 4;
+            this.nameTB.Location = new System.Drawing.Point(82, 92);
+            this.nameTB.Name = "nameTB";
+            this.nameTB.Size = new System.Drawing.Size(421, 20);
+            this.nameTB.TabIndex = 4;
             // 
-            // textBox2
+            // commentsTB
             // 
-            this.textBox2.Location = new System.Drawing.Point(26, 150);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(477, 88);
-            this.textBox2.TabIndex = 5;
+            this.commentsTB.Location = new System.Drawing.Point(26, 150);
+            this.commentsTB.Multiline = true;
+            this.commentsTB.Name = "commentsTB";
+            this.commentsTB.Size = new System.Drawing.Size(477, 88);
+            this.commentsTB.TabIndex = 5;
             // 
             // label5
             // 
@@ -124,12 +124,12 @@
             this.label5.TabIndex = 6;
             this.label5.Text = "E-mail Address: ";
             // 
-            // textBox3
+            // emailTB
             // 
-            this.textBox3.Location = new System.Drawing.Point(143, 254);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(360, 20);
-            this.textBox3.TabIndex = 7;
+            this.emailTB.Location = new System.Drawing.Point(143, 254);
+            this.emailTB.Name = "emailTB";
+            this.emailTB.Size = new System.Drawing.Size(360, 20);
+            this.emailTB.TabIndex = 7;
             // 
             // label6
             // 
@@ -296,55 +296,55 @@
             this.label17.TabIndex = 20;
             this.label17.Text = "Search Engine";
             // 
-            // radioButton1
+            // searchEngineRB
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(127, 377);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(14, 13);
-            this.radioButton1.TabIndex = 25;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.searchEngineRB.AutoSize = true;
+            this.searchEngineRB.Location = new System.Drawing.Point(127, 377);
+            this.searchEngineRB.Name = "searchEngineRB";
+            this.searchEngineRB.Size = new System.Drawing.Size(14, 13);
+            this.searchEngineRB.TabIndex = 25;
+            this.searchEngineRB.TabStop = true;
+            this.searchEngineRB.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // linksRB
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(294, 377);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(14, 13);
-            this.radioButton2.TabIndex = 26;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.linksRB.AutoSize = true;
+            this.linksRB.Location = new System.Drawing.Point(294, 377);
+            this.linksRB.Name = "linksRB";
+            this.linksRB.Size = new System.Drawing.Size(14, 13);
+            this.linksRB.TabIndex = 26;
+            this.linksRB.TabStop = true;
+            this.linksRB.UseVisualStyleBackColor = true;
             // 
-            // radioButton4
+            // otherRB
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(691, 377);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(14, 13);
-            this.radioButton4.TabIndex = 28;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.otherRB.AutoSize = true;
+            this.otherRB.Location = new System.Drawing.Point(691, 377);
+            this.otherRB.Name = "otherRB";
+            this.otherRB.Size = new System.Drawing.Size(14, 13);
+            this.otherRB.TabIndex = 28;
+            this.otherRB.TabStop = true;
+            this.otherRB.UseVisualStyleBackColor = true;
             // 
-            // radioButton5
+            // referenceInBookRB
             // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Location = new System.Drawing.Point(619, 377);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(14, 13);
-            this.radioButton5.TabIndex = 29;
-            this.radioButton5.TabStop = true;
-            this.radioButton5.UseVisualStyleBackColor = true;
+            this.referenceInBookRB.AutoSize = true;
+            this.referenceInBookRB.Location = new System.Drawing.Point(619, 377);
+            this.referenceInBookRB.Name = "referenceInBookRB";
+            this.referenceInBookRB.Size = new System.Drawing.Size(14, 13);
+            this.referenceInBookRB.TabIndex = 29;
+            this.referenceInBookRB.TabStop = true;
+            this.referenceInBookRB.UseVisualStyleBackColor = true;
             // 
-            // radioButton6
+            // deitelRB
             // 
-            this.radioButton6.AutoSize = true;
-            this.radioButton6.Location = new System.Drawing.Point(451, 377);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(14, 13);
-            this.radioButton6.TabIndex = 30;
-            this.radioButton6.TabStop = true;
-            this.radioButton6.UseVisualStyleBackColor = true;
+            this.deitelRB.AutoSize = true;
+            this.deitelRB.Location = new System.Drawing.Point(451, 377);
+            this.deitelRB.Name = "deitelRB";
+            this.deitelRB.Size = new System.Drawing.Size(14, 13);
+            this.deitelRB.TabIndex = 30;
+            this.deitelRB.TabStop = true;
+            this.deitelRB.UseVisualStyleBackColor = true;
             // 
             // label18
             // 
@@ -356,19 +356,19 @@
             this.label18.TabIndex = 31;
             this.label18.Text = "Rate our site: ";
             // 
-            // comboBox1
+            // rateOurSiteCB
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.rateOurSiteCB.FormattingEnabled = true;
+            this.rateOurSiteCB.Items.AddRange(new object[] {
             "Amazing",
             "Good",
             "Regular",
             "Bad",
             "Awful"});
-            this.comboBox1.Location = new System.Drawing.Point(126, 406);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(375, 21);
-            this.comboBox1.TabIndex = 32;
+            this.rateOurSiteCB.Location = new System.Drawing.Point(126, 406);
+            this.rateOurSiteCB.Name = "rateOurSiteCB";
+            this.rateOurSiteCB.Size = new System.Drawing.Size(375, 21);
+            this.rateOurSiteCB.TabIndex = 32;
             // 
             // button1
             // 
@@ -378,6 +378,7 @@
             this.button1.TabIndex = 33;
             this.button1.Text = "Submit";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.submit_Click);
             // 
             // button3
             // 
@@ -387,7 +388,7 @@
             this.button3.TabIndex = 35;
             this.button3.Text = "Clear";
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button3.Click += new System.EventHandler(this.clear_Click);
             // 
             // Feedbackform
             // 
@@ -396,13 +397,13 @@
             this.ClientSize = new System.Drawing.Size(891, 636);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.rateOurSiteCB);
             this.Controls.Add(this.label18);
-            this.Controls.Add(this.radioButton6);
-            this.Controls.Add(this.radioButton5);
-            this.Controls.Add(this.radioButton4);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.deitelRB);
+            this.Controls.Add(this.referenceInBookRB);
+            this.Controls.Add(this.otherRB);
+            this.Controls.Add(this.linksRB);
+            this.Controls.Add(this.searchEngineRB);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label15);
@@ -420,10 +421,10 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.emailTB);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.commentsTB);
+            this.Controls.Add(this.nameTB);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -442,10 +443,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox nameTB;
+        private System.Windows.Forms.TextBox commentsTB;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox emailTB;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
@@ -463,13 +464,13 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.RadioButton radioButton5;
-        private System.Windows.Forms.RadioButton radioButton6;
+        private System.Windows.Forms.RadioButton searchEngineRB;
+        private System.Windows.Forms.RadioButton linksRB;
+        private System.Windows.Forms.RadioButton otherRB;
+        private System.Windows.Forms.RadioButton referenceInBookRB;
+        private System.Windows.Forms.RadioButton deitelRB;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox rateOurSiteCB;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button3;
     }
