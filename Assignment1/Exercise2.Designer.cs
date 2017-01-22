@@ -41,8 +41,8 @@
             this.lstCourses = new System.Windows.Forms.ListBox();
             this.computerProgrammerRB = new System.Windows.Forms.RadioButton();
             this.computerProgrammerAnalystRB = new System.Windows.Forms.RadioButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.txtDisplay = new System.Windows.Forms.TextBox();
+            this.displayButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -198,6 +198,7 @@
             this.availableCoursesCB.Name = "availableCoursesCB";
             this.availableCoursesCB.Size = new System.Drawing.Size(437, 26);
             this.availableCoursesCB.TabIndex = 3;
+            this.availableCoursesCB.SelectedIndexChanged += new System.EventHandler(this.availableCoursesCB_SelectedIndexChanged);
             // 
             // lstCourses
             // 
@@ -207,6 +208,7 @@
             this.lstCourses.Name = "lstCourses";
             this.lstCourses.Size = new System.Drawing.Size(437, 166);
             this.lstCourses.TabIndex = 2;
+            this.lstCourses.DoubleClick += new System.EventHandler(this.lstCourses_DoubleClick);
             // 
             // computerProgrammerRB
             // 
@@ -218,6 +220,7 @@
             this.computerProgrammerRB.TabIndex = 1;
             this.computerProgrammerRB.Text = "Computer Programmer";
             this.computerProgrammerRB.UseVisualStyleBackColor = true;
+            this.computerProgrammerRB.CheckedChanged += new System.EventHandler(this.programType_Changed);
             // 
             // computerProgrammerAnalystRB
             // 
@@ -231,35 +234,38 @@
             this.computerProgrammerAnalystRB.TabStop = true;
             this.computerProgrammerAnalystRB.Text = "Computer Programmer / Analyst";
             this.computerProgrammerAnalystRB.UseVisualStyleBackColor = true;
+            this.computerProgrammerAnalystRB.CheckedChanged += new System.EventHandler(this.programType_Changed);
             // 
-            // textBox1
+            // txtDisplay
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 354);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(1118, 155);
-            this.textBox1.TabIndex = 2;
+            this.txtDisplay.Location = new System.Drawing.Point(12, 354);
+            this.txtDisplay.Multiline = true;
+            this.txtDisplay.Name = "txtDisplay";
+            this.txtDisplay.Size = new System.Drawing.Size(1118, 155);
+            this.txtDisplay.TabIndex = 2;
             // 
-            // button1
+            // displayButton
             // 
-            this.button1.Location = new System.Drawing.Point(13, 314);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(159, 34);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Display";
-            this.button1.UseVisualStyleBackColor = true;
+            this.displayButton.Location = new System.Drawing.Point(12, 313);
+            this.displayButton.Name = "displayButton";
+            this.displayButton.Size = new System.Drawing.Size(159, 34);
+            this.displayButton.TabIndex = 3;
+            this.displayButton.Text = "Display";
+            this.displayButton.UseVisualStyleBackColor = true;
+            this.displayButton.Click += new System.EventHandler(this.displayButton_Click);
             // 
             // Exercise2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1143, 521);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.displayButton);
+            this.Controls.Add(this.txtDisplay);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "Exercise2";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form3";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Exercise2_FormClosing);
             this.Load += new System.EventHandler(this.Form3_Load);
@@ -276,14 +282,14 @@
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtDisplay;
         private System.Windows.Forms.TextBox phoneNumberTextBox;
         private System.Windows.Forms.TextBox provinceTextBox;
         private System.Windows.Forms.TextBox postalCodeTextBox;
         private System.Windows.Forms.TextBox cityTextBox;
         private System.Windows.Forms.TextBox addressTextBox;
         private System.Windows.Forms.TextBox nameTextBox;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button displayButton;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
