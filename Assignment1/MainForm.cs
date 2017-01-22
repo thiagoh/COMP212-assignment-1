@@ -13,7 +13,7 @@ namespace Assignment1 {
 
         private Exercise1 exercise1;
         private Exercise2 exercise2;
-        private Exercise3 exercise3;
+        private Feedbackform exercise3;
 
         public MainForm() {
             InitializeComponent();
@@ -41,7 +41,7 @@ namespace Assignment1 {
 
         private void button3_Click(object sender, EventArgs e) {
             if (exercise3 == null) {
-                exercise3 = new Exercise3();
+                exercise3 = new Feedbackform();
             }
             exercise3.Show();
             exercise3.Focus();
