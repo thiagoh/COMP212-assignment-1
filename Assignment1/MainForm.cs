@@ -21,6 +21,13 @@ namespace Assignment1 {
 
         private void Form1_Load(object sender, EventArgs e) {
 
+            var message = "Hi professor!";
+            message += "\r\n\nTo check my work click in one of the three exercise buttons.";
+            message += "\r\n\nThanks,";
+            message += "\r\n\nThiago de Andrade Souza";
+            message += "\r\nStudent n. #300886181";
+
+            MessageBox.Show(message, "Instructions", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void button1_Click(object sender, EventArgs e) {

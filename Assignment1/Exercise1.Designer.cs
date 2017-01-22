@@ -125,7 +125,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "Exercise1";
-            this.Text = "Form2";
+            this.Text = "Grade Book Form";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Exercise1_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();

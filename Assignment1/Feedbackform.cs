@@ -89,5 +89,9 @@ namespace Assignment1 {
 
             MessageBox.Show(message, "Thank you for your feedback!", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void Feedbackform_FormClosing(object sender, FormClosingEventArgs e) {
+            e.Cancel = true;
+        }
     }
 }

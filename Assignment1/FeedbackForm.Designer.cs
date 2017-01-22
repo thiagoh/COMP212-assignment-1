@@ -394,7 +394,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(891, 636);
+            this.ClientSize = new System.Drawing.Size(795, 510);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.rateOurSiteCB);
@@ -431,7 +431,8 @@
             this.Controls.Add(this.label1);
             this.Name = "Feedbackform";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form4";
+            this.Text = "Feedback Form";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Feedbackform_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
